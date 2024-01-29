@@ -9,6 +9,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Document(indexName = "tasks")
@@ -25,6 +26,6 @@ public class Task{
     private String status;
     @Field(type= FieldType.Date)
     private Date deadline;
-
-
+    @Field(type = FieldType.Nested)
+    private List<Subtask> subtasks;
 }

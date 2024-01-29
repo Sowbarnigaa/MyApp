@@ -23,14 +23,14 @@
 FROM openjdk:21-slim
 
 WORKDIR /app
-COPY ./target/taskapp.jar /app
-EXPOSE 8082
+COPY ./target/myapptask.jar /app
+EXPOSE 8083
 
-CMD ["java", "-jar", "taskapp.jar"]
+CMD ["java", "-jar", "myapptask.jar"]
 #
 ## Use an official OpenJDK runtime as a parent image
 #FROM openjdk:11
-#
+
 ## Set the working directory to /app
 #WORKDIR /app
 #

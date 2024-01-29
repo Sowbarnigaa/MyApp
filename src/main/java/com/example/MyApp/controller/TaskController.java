@@ -73,6 +73,7 @@ public class TaskController {
         task_exist.setDescription(task.getDescription());
         task_exist.setStatus(task.getStatus());
         task_exist.setDeadline(task.getDeadline());
+        task_exist.setSubtasks(task.getSubtasks());
         Task task_update=taskService.updateTask(task_exist);
         return ResponseEntity.ok(task_update);
     }
