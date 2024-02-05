@@ -23,10 +23,6 @@ import java.util.List;
 @Controller
 public class TaskController {
 
-    @GetMapping("/tryon")
-    public String tryon(){
-        return "hello";
-    }
 
     @Autowired
     private final TaskService  taskService;
@@ -35,10 +31,7 @@ public class TaskController {
     private final ElasticSearchService elasticSearchService;
 
 
-    @GetMapping("/tryo")
-    public String tryo(){
-        return "hi";
-    }
+
     @GetMapping("/findAll")
     public Iterable<Task> findAll(){
         return taskService.getTasks();
